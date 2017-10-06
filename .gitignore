@@ -1,0 +1,18 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+build/
+outputs/
+node_modules
+
+yarn-error.log
+.vscode
+
+#OS X Crap
+.DS_Store
