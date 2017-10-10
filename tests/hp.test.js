@@ -5,7 +5,7 @@ function main() {
     
         // Open a Chrome browser.
         var driver = new webdriver.Builder()
-            .withCapabilities(webdriver.Capabilities.chrome())
+            .withCapabilities(webdriver.Capabilities.firefox())
             .build();
     
         // Initialize the eyes SDK and set your private API key.
