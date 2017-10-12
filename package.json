@@ -7,8 +7,8 @@
     "test": "node tests/*.test.js",
     "lint": "eslint .",
     "validate": "npm-run-all --parallel test lint",
-    "precommit": "npm run lint",
-    "prepush": "npm run lint"
+    "precommit": "npm test",
+    "prepush": "npm test"
   },
   "author": "",
   "license": "ISC",
