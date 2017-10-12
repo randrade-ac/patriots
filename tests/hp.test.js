@@ -1,16 +1,16 @@
 function main() {
     
-        var webdriver = require('selenium-webdriver');
-        //var path = require('chromedriver').path;
+        let webdriver = require('selenium-webdriver');
+        //let path = require('chromedriver').path;
     
         // Open a Chrome browser.
-        var driver = new webdriver.Builder()
+        let driver = new webdriver.Builder()
             .withCapabilities(webdriver.Capabilities.firefox())
             .build();
     
         // Initialize the eyes SDK and set your private API key.
-        var Eyes = require('eyes.selenium').Eyes;
-        var eyes = new Eyes();
+        let Eyes = require('eyes.selenium').Eyes;
+        let eyes = new Eyes();
         eyes.setApiKey('97tGXmXsmRIHq7XiC0ndagRck19Ws2y2lFaKVLBiCEMI110');
         //97tGXmXsmRIHq7XiC0ndagRck19Ws2y2lFaKVLBiCEMI110
     
