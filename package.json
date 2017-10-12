@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "eslint .",
-    "pre-commit": "npm test",
-    "pre-push": "npm test"
+    "precommit": "npm test",
+    "prepush": "npm test"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,11 @@
     "babel-register": "^6.26.0",
     "eslint": "^4.8.0",
     "husky": "^0.14.3"
+  },
+  "pre-commit": {
+    "run": "lint"
+  },
+  "pre-push": {
+    "run": "lint"
   }
 }
