@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/hp.test.js",
-    "lint": "standard",
-    "validate": "npm-run-all --parallel test lint",
+    "test": "node tests/*.test.js",
+    "eslint": "eslint .",
+    "validate": "npm-run-all --parallel test eslint",
     "precommit": "npm run validate",
     "prepush": "npm run validate"
   },

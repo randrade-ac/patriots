@@ -1,5 +1,5 @@
-let assert = require('assert');
-let builder = require('./config/builder');
+let assert = require('assert')
+let builder = require('./config/builder')
 
 describe('webdriver.io page', function() {
     before(function(){
