@@ -1,43 +1,40 @@
-let assert = require('assert')
-let builder = require('./config/builder')
+import { init, setEyes , closeEyes} from '../config/builder'
+const { By, until} = require('selenium-webdriver')
 
-describe('webdriver.io page', function() {
-    before(function(){
-        
-        builder.init();
-    
-    });
- 
-    after(function(){
- 
-        // do something after test suite execution is finished
-        // no matter if there are failed cases
-        
-    });
-    
-    beforeEach(function(){
-        
-        // do something before test case execution
-        // no matter if there are failed cases
-    
-    });
- 
-    afterEach(function(){
- 
-        // do something after test case execution is finished
-        // no matter if there are failed cases
- 
-    });
 
-    it('test 1', function () {
-        browser.url('http://webdriver.io');
-        let title = browser.getTitle();
-        assert.equal(title, 'WebdriverIO - WebDriver bindings for Node.js');
-    });
 
-    it('test 2', function () {
-        browser.url('http://webdriver.io');
-        let title = browser.getTitle();
-        assert.equal(title, 'WebdriverIO - WebDriver bindings for Node.js');
-    });
-});
+describe('first', function first() {
+// 		beforeEach(() => {
+// 			driver = builder.init()
+// 			builder.openEyes(driver)
+// 		})
+
+	it('returns the width', function returns() {
+
+		let driver = init()
+		
+        // driver.get('http://webdriver.io')
+		let eyes = setEyes(driver)
+		//eyes.open(driver, 'Avenue Code', 'Title check', {width: 1600, height: 900})
+        driver.get('http://www.google.com')
+        driver.findElement(By.name('q')).sendKeys('webdriver')
+        driver.findElement(By.name('btnG')).click()                      // (3)
+        driver.wait(until.titleIs('webdriver - Google Search'), 1000)
+        
+        eyes.checkWindow('Home Page')
+
+		closeEyes(eyes)
+        
+		// //         // Close the browser.
+		driver.quit()
+
+
+
+
+		// let driver = new webdriver.Builder()
+		//     		.withCapabilities(webdriver.Capabilities.firefox())
+		//     		.build()
+                    
+		//     	driver.get('http://webdriver.io')
+	})
+})
