@@ -9,7 +9,7 @@ describe('first', function first() {
 	beforeEach(() => {
         console.log('inside timeout')
         // jest.setTimeout(1000)
-        jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000
     })
 
     afterEach(() => {
@@ -28,7 +28,7 @@ describe('first', function first() {
 		driver.get('http://www.google.com')
 		driver.findElement(By.name('q')).sendKeys('webdriver')
 		driver.findElement(By.name('btnG')).click()                      // (3)
-		driver.wait(until.titleIs('webdriver - Google Search'), 1000)
+		//driver.wait(until.titleIs('webdriver - Google Search'), 1000)
 		// setEyes(driver, done)
 		//eyes.open(driver, 'Avenue Code', 'Title check', {width: 1600, height: 900})
 		

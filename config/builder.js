@@ -1,5 +1,5 @@
 import webdriver from 'selenium-webdriver'
-
+import {Eyes} from 'eyes.selenium'
 
 function init() {
 	let driver = new webdriver.Builder()
@@ -8,10 +8,9 @@ function init() {
 	return driver
 }
 
-function setEyes(driver, done) {
+function setEyes(driver) {
 	console.log('inside setEyes')
 
-	let Eyes = require('eyes.selenium').Eyes
 	// let Eyes = require('eyes.selenium').Eyes
 	let eyes = new Eyes()
 	eyes.setApiKey('97tGXmXsmRIHq7XiC0ndagRck19Ws2y2lFaKVLBiCEMI110')
@@ -33,17 +32,17 @@ function setEyes(driver, done) {
     Note: Overriding the match level is only effective if set before initialization.
     */
 
-    eyes.open(driver, 'Avenue Code', 'Title check', {width: 1600, height: 900}).then(function (driver) {
+    eyes.open(driver, 'Avenue Code', 'Title check', {width: 1600, height: 900})
 
     // eyes.open(driver, 'Hello World!', 'My first Javascript test!',
     // {width: 800, height: 600})
 
     
-		console.log('after open')
-		eyes.checkWindow('Home Page')
-		// // eyes.close()
-		done()
-	}).catch(done)
+		// console.log('after open')
+		// eyes.checkWindow('Home Page')
+		// // // eyes.close()
+		//done()
+	
 	
 	//eyes.checkElementBy(By.id("ID"), null, "tag");
 	//eyes.checkRegionBy(selector, "window_name", matchTimeout);
