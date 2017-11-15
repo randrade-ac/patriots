@@ -28,7 +28,7 @@ describe('Google Search', function() {
   });
 
   it('demo', async function() {
-    await eyes.open(driver, 'Hello World!', 'My first Javascript test!',{width: 1600, height: 900});
+    await eyes.open(driver, 'Hello World!', 'My first Javascript test!',{width: 1200,height:977});
     await driver.get('https://www.google.com/ncr');
     await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
     await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
