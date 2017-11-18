@@ -19,12 +19,12 @@ describe('Google Search', function() {
     // env.builder() returns a Builder instance preconfigured for the
     // envrionment's target browser (you may still define browser specific
     // options if necessary (i.e. firefox.Options or chrome.Options)).
-    driver = await driver.forBrowser('chrome').build();
+    driver = await driver.forBrowser('firefox').build();
     eyes = await new Eyes();
-    //window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+    window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 300000;
     await eyes.setApiKey('97tGXmXsmRIHq7XiC0ndagRck19Ws2y2lFaKVLBiCEMI110');
-    await eyes.setLogHandler(new ConsoleLogHandler(true))
-    
+    await eyes.setLogHandler(new ConsoleLogHandler(true))    
+    // done();
   });
 
   it('demo', async function() {
@@ -34,6 +34,7 @@ describe('Google Search', function() {
     await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
     await eyes.checkWindow('Main Page');
     await eyes.close();
+    // done();
   });
 
   // The ignore function returns wrappers around describe & it that will
@@ -49,5 +50,8 @@ describe('Google Search', function() {
   //   assert.equal(url, 'https://www.google.com/');
   // });
 
-  afterAll(() => driver && driver.quit());
+  afterAll(function() {
+    driver && driver.quit(); 
+    // done();
+  });
 });
