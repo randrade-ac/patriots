@@ -24,3 +24,9 @@ npm install
 make sure you set your applitools key on patriots/tests/google_search.test.js line 25
 <br/>
 npm test
+<br/>
+go to your applitools batche profile to see the results: https://eyes.applitools.com/app/batches
+<br/>
+try to add some ignored areas, etc
+<br/>
+enjoy and thanks for checking out :)
