@@ -24,7 +24,6 @@ describe('Google Search', function() {
     window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 300000;
     await eyes.setApiKey('97tGXmXsmRIHq7XiC0ndagRck19Ws2y2lFaKVLBiCEMI110');
     await eyes.setLogHandler(new ConsoleLogHandler(true))    
-    // done();
   });
 
   it('demo', async function() {
@@ -34,7 +33,6 @@ describe('Google Search', function() {
     await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
     await eyes.checkWindow('Main Page');
     await eyes.close();
-    // done();
   });
 
   // The ignore function returns wrappers around describe & it that will
@@ -52,6 +50,5 @@ describe('Google Search', function() {
 
   afterAll(function() {
     driver && driver.quit(); 
-    // done();
   });
 });
